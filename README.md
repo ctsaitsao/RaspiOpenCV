@@ -7,13 +7,13 @@ This project aimed to test the performance of the two latest Raspberry Pi models
 ## Hardware
 A SainSmart 6-Axis Desktop Robotic Arm was used alongside a Polulu Micro Maestro 6-channel USB Servo Controller. The controller has 6 connections for servos and can be powered by USB or a 5-16V pin input. The servos themselves were powered by a laptop charger (their cables were soldered to the charger).
 
-![](media/arm.jpg)
+<img src="images/arm.jpg" width="300">
 
-![](media/controller.png)
+<img src="images/controller.png" width="300">
 
 For vision, a Raspberry Pi camera was attached to the end effector of the robot arm.
 
-![](media/camera.jpg)
+<img src="images/camera.jpg" width="300">
 
 ## Software
 ### Dependencies
