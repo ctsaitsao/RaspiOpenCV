@@ -43,5 +43,35 @@ In a nutshell, the code detects faces and uses the x,y distance of the faces to 
    ```
    python main.py
    ```
-   
-## Demo
+
+## Testing
+Two tests were conducted to measure the performance of each Raspberry Pi model: the transient response test and the steady state response test. The former involved the user moving around in circles (so x and y coordinates are constantly changing) and analyzing how well the robot keps up with the motion. The steady state test involved the user staying at a fixed position and analyzing how well the robot adapts to the position of the user on the long run.
+
+## Demos
+- [Face-following demo.](https://youtu.be/GWdoHlCjZsU)
+- [RasPi 3 transient response test.](https://youtu.be/AGC2xwxjNNM)
+- [RasPi 3 steady state response test.](https://youtu.be/l2Q4CM-DJ3g)
+- [RasPi 4 transient response test.](https://youtu.be/Ocle1fLOTH8)
+- [RasPi 4 steady state response test.](https://youtu.be/cDEksCJzUOU)
+
+## Results and Analysis
+- RasPi 3 transient response test:
+  <br>
+  ![](raspi3_results/transient_test.png)
+- RasPi 3 steady state response test:
+  <br>
+  ![](raspi3_results/ss_test.png)
+- RasPi 4 transient response test:
+  <br>
+  ![](raspi4_results/doing_circles.png)
+- RasPi 4 steady state response test:
+  <br>
+  ![](raspi4_results/ss_test4.png)
+  
+The Raspberry Pi 4 provides significantly more speed and precision when performing the project's code than the Raspberry Pi 3. 
+
+With regards to transient performance, the Pi 3 has peak-to-peak sensor values of about 400 and 200 for sx and sy, respectively. Meanwhile, the Pi 4 has about 200 and 150. This is a significant reduction in range, especially for sx, which displayed a reduction of 50%.
+
+Regarding steady state performance, the Pi 4 comes out on top again. The Pi 4 had a nearly perfect performance for sx, and showed a peak-to-peak of around 25 for sy while the Pi 3 had almost 40.
+
+These tests provide great quantitative insight on the difference in Pi models, but there is also much to be discussed when it comes to qualitative analysis. The Pi3 had significant visual lag between events in real life and events captured by the camera when compared to the Pi 4. In other words, the Pi 3's camera footage was delayed, causing the robot to naturally follow a slower trajectory. This is also shown in the Pi 3's graphs, as the peaks are wider than the Pi 4's due to the slower response. The Pi 4 was much more crisp and responsive. 
